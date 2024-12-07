@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cross-Border Ethereum Transfer</title>
-    <style>
+    <style>         
         /* Global Styling */
         * {
             margin: 0;
@@ -14,13 +14,25 @@
 
         body {
             font-family: 'Arial', sans-serif;
+        background-color: #e8f5e9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url('https://zebpay.com/wp-content/uploads/2022/12/Ethereum-Price-Prediction.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the background image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling */
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
             background-color: #e8f5e9;
             color: #333;
             line-height: 1.6;
             padding: 20px;
         }
 
-        .logo{
+        .logo {
             font-size: 1.8rem;
             font-weight: bold;
             color: #fff;
@@ -94,9 +106,40 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        /* Add animation styles */
+@keyframes typing {
+    0% {
+        width: 0;
+        border-right: 3px solid #2e7d32;
+    }
+    100% {
+        width: 100%;
+        border-right: 3px solid transparent;
+    }
+}
+
+.welcome {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-top: 100px;
+    white-space: nowrap;
+    overflow: hidden; /* Hides the text as it "types" */
+    width: 0; /* Start with no width */
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Blink cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
         .nav-bar a:hover {
             background-color: white;
-            color: #2e7d32;
+            color: #1b5e20;
         }
 
         #status {
@@ -109,21 +152,169 @@
             margin-top: 30px;
             color: #666;
         }
+
+        /* Added section for 'About Us' and 'Contact Us' pages */
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .content-section h2 {
+            color: #2e7d32;
+            text-align: center;
+        }
+
+        .content-section p {
+            text-align: justify;
+            margin: 15px 0;
+        }
+        /* Navigation Bar */
+.nav-bar {
+    display: grid;
+    justify-content:flex-start; /* Space between logo and menu */
+    background-color: #1e3a8a; /* Dark blue color */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fix the navbar at the top of the screen */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Make sure the navbar is on top */
+}
+
+/* Logo Styling */
+.nav-bar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    justify-content: left;
+}
+
+/* Navigation links */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: #0d2c7f; /* Slightly darker blue on hover */
+    color: white;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: flex-end; /* Space between logo and menu */
+    background-color: #1e3a8a; /* Dark blue color */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fix the navbar at the top of the screen */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Make sure the navbar is on top */
+}
+
+/* Logo Styling */
+.nav-bar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    justify-self: left;
+}
+
+/* Navigation links */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: #0d2c7f; /* Slightly darker blue on hover */
+    color: white;
+}
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between; /* Space between the logo and the links */
+    align-items: center; /* Align items vertically in the center */
+    background-color: #1e3a8a; /* Dark blue color */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fix the navbar at the top of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Logo Styling */
+.nav-bar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-right: auto; /* Push the links to the right */
+}
+
+/* Navigation links */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px; /* Add spacing between links */
+}
+
+/* Hover effect for links */
+.nav-bar a:hover {
+    background-color: #0d2c7f; /* Slightly darker blue on hover */
+    color: white;
+}
+
+
+
+
+        .welcome {
+            text-align: center;
+            font-size: 2.5rem;
+            color: 0d2c7f;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <div class="nav-bar">
         <div class="logo">CrossCoin</div>
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="#" onclick="loadPage('home')">Home</a>
+        <a href="#" onclick="loadPage('about')">About Us</a>
+        <a href="#" onclick="loadPage('contact')">Contact Us</a>
     </div>
 
     <!-- Main Container -->
-    <div class="container">
-        <h1>Currency Transfer with Ethereum</h1>
-
+    <div id="main-container" class="container">
+        <div class="welcome">
+            <h4>Welcome to CrossCoin</h4>
+        </div>
 
         <form id="currencyForm">
             <label for="amount">Amount (ETH):</label>
@@ -146,6 +337,46 @@
     <!-- Load Web3.js -->
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script>
+        // JavaScript for page loading
+        function loadPage(page) {
+            const mainContainer = document.getElementById('main-container');
+
+            if (page === 'home') {
+                mainContainer.innerHTML = `
+                    <div class="welcome">
+                        <h4>Welcome to CrossCoin</h4>
+                    </div>
+                    <form id="currencyForm">
+                        <label for="amount">Amount (ETH):</label>
+                        <input type="number" id="amount" name="amount">
+                        <label for="receiver">Receiver Address:</label>
+                        <input type="text" id="receiver" name="receiver" required>
+                        <button type="submit">Transfer</button>
+                    </form>
+                    <h2>Transaction Status: <span id="status">Not initiated</span></h2>
+                `;
+            } else if (page === 'about') {
+                mainContainer.innerHTML = `
+                    <div class="content-section">
+                        <h2>About Us</h2>
+                        <p>CrossCoin is a secure and efficient cross-border currency transfer service powered by Ethereum. Our goal is to enable seamless, fast, and low-cost international payments leveraging blockchain technology. We provide users with a secure platform to send and receive cryptocurrencies across borders, ensuring transparency and security at every step of the transaction process.</p>
+                        <p>We are a dedicated team of five passionate professionals who are committed to revolutionizing the way people transfer money internationally. Our team combines expertise in blockchain technology, finance, and software development to bring you an innovative solution that transforms the traditional payment systems into a more efficient, cost-effective, and accessible method for everyone.</p>
+                        <p>At CrossCoin, we believe that blockchain is the future of cross-border payments. By using Ethereum's decentralized network, we ensure that all transactions are transparent, secure, and processed in real time. Our mission is to empower individuals and businesses by providing them with a platform that eliminates the barriers posed by traditional banking systems, such as high fees and slow processing times.</p>
+                        <h5>Team members: Joshua, Nikhil, Sadwik, Varshith, Vigneshwar</h5>
+                    </div>
+                `;
+            } else if (page === 'contact') {
+                mainContainer.innerHTML = `
+                    <div class="content-section">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions or need support, feel free to contact us:</p>
+                        <p>Email: support@crosscoin.com</p>
+                        <p>Phone: +123 456 7890</p>
+                    </div>
+                `;
+            }
+        }
+
         // Initialize Web3.js and connect to MetaMask
         let web3;
 
